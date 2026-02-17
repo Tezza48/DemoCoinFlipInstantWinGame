@@ -3,9 +3,7 @@ from dataclasses import asdict
 from http import server
 from operator import itemgetter
 
-from coin_flip_game.coin_flip_game import CoinFlipPlugin
-from coin_flip_game.domain import CoinFlipPlayer
-from coin_flip_game.model import DB
+from coin_flip_plugin import DB, CoinFlipPlayer, CoinFlipPlugin
 from framework.framework import BasePlugin
 
 # Refresh Request /play/refresh {"id": number, "request": {}}
