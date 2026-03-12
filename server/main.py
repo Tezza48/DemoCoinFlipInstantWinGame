@@ -63,7 +63,7 @@ class HTTPRequestHandler(server.SimpleHTTPRequestHandler):
 
 
 def main():
-    s = server.HTTPServer(("localhost", 3000), HTTPRequestHandler)
+    s = server.HTTPServer(("0.0.0.0", 3000), HTTPRequestHandler)
     s.context = {"db": DB(), "plugin": CoinFlipPlugin()}
     s.serve_forever()
     s.server_close()
